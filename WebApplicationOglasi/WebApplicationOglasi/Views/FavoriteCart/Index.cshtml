@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Омилени огласи</h2>
+<table class="table" id="table1">
+    <thead>
+        <tr>
+            <th>Занимање</th>
+            <th>Краен датум</th>
+            <th>Правно лице</th>
+            <th>Адреса</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Session["Cart"] != null)
+        {foreach (var item in (List<WebApplicationOglasi.Models.Oglas>)Session["Cart"])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.zanimanje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.krajnaData)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pravnoLice)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.adresa)
+                </td>
+                <td>@Html.ActionLink("Отстрани од омилени", "removeFromFav", new { id = item.Id})</td>
+            </tr>
+        }
+        }
+    </tbody>
+</table>
+

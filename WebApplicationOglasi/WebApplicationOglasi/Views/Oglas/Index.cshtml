@@ -25,6 +25,7 @@
                 @Html.DisplayNameFor(model => model.adresa)
             </th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -44,6 +45,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.adresa)
                 </td>
+                <td>@Html.ActionLink("Додади во омилени", "AddToFav", "FavoriteCart", new { id = item.Id },null)</td>
                 <td>
                     @Html.ActionLink("Измени", "Edit", new { id = item.Id }) |
                     @Html.ActionLink("Детали", "Details", new { id = item.Id }) |
