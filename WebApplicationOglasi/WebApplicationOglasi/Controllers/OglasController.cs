@@ -19,7 +19,23 @@ namespace WebApplicationOglasi.Controllers
         {
             return View(db.Oglas.ToList());
         }
+        public ActionResult Aparati()
+        {
+            return View(db.Oglas.ToList());
+        }
+        public ActionResult Avtomobili()
+        {
+            return View(db.Oglas.ToList());
+        }
+        public ActionResult Mebel()
+        {
+            return View(db.Oglas.ToList());
 
+        }
+        public ActionResult RabotnaPozicija()
+        {
+            return View(db.Oglas.ToList());
+        }
         // GET: Oglas/Details/5
         public ActionResult Details(int? id)
         {
@@ -46,7 +62,7 @@ namespace WebApplicationOglasi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,zanimanje,pocetnaData,krajnaData,pravnoLice,opstina,adresa,email,telBroj,opis")] Oglas oglas)
+        public ActionResult Create([Bind(Include = "Id,zanimanje,kategorija,pocetnaData,krajnaData,pravnoLice,opstina,adresa,email,telBroj,slikaUrl,opis")] Oglas oglas)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +94,7 @@ namespace WebApplicationOglasi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,zanimanje,pocetnaData,krajnaData,pravnoLice,opstina,adresa,email,telBroj,opis")] Oglas oglas)
+        public ActionResult Edit([Bind(Include = "Id,zanimanje,kategorija,pocetnaData,krajnaData,pravnoLice,opstina,adresa,email,telBroj,slikaUrl,opis")] Oglas oglas)
         {
             if (ModelState.IsValid)
             {

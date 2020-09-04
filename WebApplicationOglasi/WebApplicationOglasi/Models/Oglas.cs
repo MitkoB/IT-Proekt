@@ -11,8 +11,10 @@ namespace WebApplicationOglasi.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        [Display(Name ="Занимање")]
+        [Display(Name ="Наслов")]
         public string zanimanje { get; set; }
+        [Display(Name ="Категорија")]
+        public string kategorija { get; set; }
         [Required]
         [Display(Name = "Дата на објавување")]
         public DateTime pocetnaData { get; set; }
@@ -39,8 +41,11 @@ namespace WebApplicationOglasi.Models
         [Display(Name = "Телефонски број")]
 
         public string telBroj { get; set; }
+        [Display(Name = "Фотографија")]
+        public string slikaUrl { get; set; }
         [Display(Name = "Опис на работата")]
 
         public string opis { get; set; }
+        
     }
 }

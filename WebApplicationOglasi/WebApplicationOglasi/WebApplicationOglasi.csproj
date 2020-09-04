@@ -183,6 +183,14 @@
     <Compile Include="Migrations\202008091816262_oglasModelDodaden.Designer.cs">
       <DependentUpon>202008091816262_oglasModelDodaden.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009020219572_kategorijaDodadena.cs" />
+    <Compile Include="Migrations\202009020219572_kategorijaDodadena.Designer.cs">
+      <DependentUpon>202009020219572_kategorijaDodadena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009040255504_slikaDodadena.cs" />
+    <Compile Include="Migrations\202009040255504_slikaDodadena.Designer.cs">
+      <DependentUpon>202009040255504_slikaDodadena.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddToRoleModel.cs" />
@@ -496,6 +504,10 @@
     <Content Include="Views\Account\AddUserToRole.cshtml" />
     <Content Include="Views\Account\AddToFavorite.cshtml" />
     <Content Include="Views\FavoriteCart\Index.cshtml" />
+    <Content Include="Views\Oglas\RabotnaPozicija.cshtml" />
+    <Content Include="Views\Oglas\Aparati.cshtml" />
+    <Content Include="Views\Oglas\Avtomobili.cshtml" />
+    <Content Include="Views\Oglas\Mebel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -519,6 +531,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008091816262_oglasModelDodaden.resx">
       <DependentUpon>202008091816262_oglasModelDodaden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009020219572_kategorijaDodadena.resx">
+      <DependentUpon>202009020219572_kategorijaDodadena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009040255504_slikaDodadena.resx">
+      <DependentUpon>202009040255504_slikaDodadena.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

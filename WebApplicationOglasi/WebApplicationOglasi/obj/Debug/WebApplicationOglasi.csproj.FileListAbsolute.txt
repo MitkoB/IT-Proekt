@@ -220,3 +220,5 @@ C:\Users\pc\Documents\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\De
 C:\Users\pc\Documents\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.csproj.CopyComplete
 C:\Users\pc\Documents\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.dll
 C:\Users\pc\Documents\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.pdb
+C:\Users\pc\Documents\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.Migrations.kategorijaDodadena.resources
+C:\Users\pc\Documents\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.Migrations.slikaDodadena.resources

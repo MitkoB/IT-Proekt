@@ -32,8 +32,21 @@
 
                         <ul class="nav nav-pills">
                             <li class="active">@Html.ActionLink("ДОМА", "Index", "Home")</li>
-                            <li>@Html.ActionLink("ОГЛАСИ", "Index", "Oglas")</li>
                             <li>@Html.ActionLink("КРЕИРАЈ ОГЛАС", "Create", "Oglas")</li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ОГЛАСИ <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><span>Продажба</span></li>
+                                    <li class="divider"></li>
+                                    <li><a href="@Url.Action("Aparati","Oglas")">Апарати</a></li>
+                                    <li><a href="@Url.Action("Avtomobili","Oglas")">Автомобили</a></li>
+                                    <li><a href="@Url.Action("Mebel","Oglas")">Мебел</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="@Url.Action("RabotnaPozicija","Oglas")">Работни позиции</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="@Url.Action("Index","Oglas")">Сите ОГЛАСИ</a></li>
+                                </ul>
+                            </li>
                             <li>@Html.ActionLink("ЗА НАС", "About", "Home")</li>
                             <li>@Html.ActionLink("КОНТАКТ", "Contact", "Home")</li>
                             <li>@Html.ActionLink("ОМИЛЕНИ ОГЛАСИ", "Index", "FavoriteCart")</li>
