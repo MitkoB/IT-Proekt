@@ -41,6 +41,18 @@ namespace WebApplicationOglasi.Controllers
             return View();
         }
 
+        public ActionResult Menu()
+        {
+            List<Category> viewModel = db.Categories.ToList();
+
+            return PartialView("Menu", viewModel);
+
+        }
+
+
+
+
+
         // POST: Categories/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -104,6 +116,9 @@ namespace WebApplicationOglasi.Controllers
             return View(category);
         }
 
+      
+    
+
         // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -123,5 +138,6 @@ namespace WebApplicationOglasi.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }
