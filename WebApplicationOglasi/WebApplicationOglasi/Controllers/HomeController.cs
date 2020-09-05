@@ -14,6 +14,11 @@ namespace WebApplicationOglasi.Controllers
             return View();
         }
 
+        [ChildActionOnly]
+        public ActionResult RenderMenu()
+        {
+            return PartialView("Menu");
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

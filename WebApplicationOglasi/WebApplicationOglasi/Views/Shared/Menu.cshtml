@@ -1,0 +1,9 @@
+﻿@model List<WebApplicationOglasi.Models.Category>
+
+
+
+        @foreach (var item in Model)
+        {
+                <li><a href="@Url.Action("ToDetermine","Categories")">@item.ime</a></li>
+        }
+

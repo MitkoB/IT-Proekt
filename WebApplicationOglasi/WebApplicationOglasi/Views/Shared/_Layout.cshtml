@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,66 +26,61 @@
             <div class="col-md-6 col-sm-6 col-xs-6">
                 @Html.Partial("_LoginPartial")
             </div>
-            </div>
-            <div class="row">
+        </div>
+        <div class="row">
 
-                <div class="col-md-12">
-                    <div class="nav-menus">
+            <div class="col-md-12">
+                <div class="nav-menus">
 
-                        <ul class="nav nav-pills">
-                            <li class="active">@Html.ActionLink("ДОМА", "Index", "Home")</li>
-                            <li>@Html.ActionLink("КРЕИРАЈ ОГЛАС", "Create", "Oglas")</li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ОГЛАСИ <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><span>Продажба</span></li>
-                                    <li class="divider"></li>
-                                    <li><a href="@Url.Action("Aparati","Oglas")">Апарати</a></li>
-                                    <li><a href="@Url.Action("Avtomobili","Oglas")">Автомобили</a></li>
-                                    <li><a href="@Url.Action("Mebel","Oglas")">Мебел</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="@Url.Action("RabotnaPozicija","Oglas")">Работни позиции</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="@Url.Action("Index","Oglas")">Сите ОГЛАСИ</a></li>
-                                </ul>
-                            </li>
-                            <li>@Html.ActionLink("ЗА НАС", "About", "Home")</li>
-                            <li>@Html.ActionLink("КОНТАКТ", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("ОМИЛЕНИ ОГЛАСИ", "Index", "FavoriteCart")</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-            @RenderBody()
-            <hr />
-            <footer>
-                <div class="row">
-                    <div class="col-md-12 copyright">
-
-
-
-                        <div class="col-md-6 col-sm-6 copyright-left">
-                            <p>&copy; @DateTime.Now.Year -Сите права задржани ОГЛАСИ МК М3Н</p>
-                        </div>
-                        <div class="col-md-6 col-sm-6 copyright-right">
-
-                            <ul class="list-unstyled list-social">
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <ul class="nav nav-pills">
+                        <li class="active">@Html.ActionLink("ДОМА", "Index", "Home")</li>
+                        <li>@Html.ActionLink("КРЕИРАЈ ОГЛАС", "Create", "Oglas")</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ОГЛАСИ <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><span>Продажба</span></li>
+                                <li class="divider"></li>
+                                @{Html.RenderAction("Menu", "Categories");}
 
                             </ul>
-                        </div>
+                        </li>
+                        <li>@Html.ActionLink("ЗА НАС", "About", "Home")</li>
+                        <li>@Html.ActionLink("КОНТАКТ", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("ОМИЛЕНИ ОГЛАСИ", "Index", "FavoriteCart")</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="row">
+                <div class="col-md-12 copyright">
+
+
+
+                    <div class="col-md-6 col-sm-6 copyright-left">
+                        <p>&copy; @DateTime.Now.Year -Сите права задржани ОГЛАСИ МК М3Н</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 copyright-right">
+
+                        <ul class="list-unstyled list-social">
+                            <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+                        </ul>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
+    </div>
 
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

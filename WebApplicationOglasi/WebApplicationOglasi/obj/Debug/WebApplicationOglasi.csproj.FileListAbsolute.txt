@@ -336,3 +336,4 @@ C:\Users\natal\Source\Repos\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\
 C:\Users\natal\Source\Repos\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.dll
 C:\Users\natal\Source\Repos\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.pdb
 C:\Users\natal\Source\Repos\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.Migrations.categoryModel.resources
+C:\Users\natal\Source\Repos\IT-Proekt\WebApplicationOglasi\WebApplicationOglasi\obj\Debug\WebApplicationOglasi.Migrations.categorychange.resources

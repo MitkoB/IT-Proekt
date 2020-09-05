@@ -170,6 +170,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\FavoriteCartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -197,10 +198,15 @@
     <Compile Include="Migrations\202009051321003_categoryModel.designer.cs">
       <DependentUpon>202009051321003_categoryModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009051527280_category-change.cs" />
+    <Compile Include="Migrations\202009051527280_category-change.designer.cs">
+      <DependentUpon>202009051527280_category-change.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddToRoleModel.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryViewModel.cs" />
     <Compile Include="Models\FavoriteItems.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -520,9 +526,11 @@
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Shared\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -552,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009051321003_categoryModel.resx">
       <DependentUpon>202009051321003_categoryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009051527280_category-change.resx">
+      <DependentUpon>202009051527280_category-change.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
