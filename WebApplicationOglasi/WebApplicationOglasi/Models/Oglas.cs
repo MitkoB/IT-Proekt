@@ -14,7 +14,7 @@ namespace WebApplicationOglasi.Models
         [Display(Name ="Наслов")]
         public string zanimanje { get; set; }
         [Display(Name ="Категорија")]
-        public string kategorija { get; set; }
+        public Category kategorija { get; set; }
         [Required]
         [Display(Name = "Дата на објавување")]
         public DateTime pocetnaData { get; set; }

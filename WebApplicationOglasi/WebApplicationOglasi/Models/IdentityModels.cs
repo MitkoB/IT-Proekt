@@ -32,5 +32,6 @@ namespace WebApplicationOglasi.Models
 
         public System.Data.Entity.DbSet<WebApplicationOglasi.Models.Oglas> Oglas { get; set; }
 
+        public System.Data.Entity.DbSet<WebApplicationOglasi.Models.Category> Categories { get; set; }
     }
 }
