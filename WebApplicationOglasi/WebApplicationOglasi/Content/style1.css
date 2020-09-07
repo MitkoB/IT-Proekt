@@ -1,0 +1,7 @@
+nav >div> ul > li> a:hover {
+    border-bottom: 1px white solid;
+}
+
+nav div ul li a.active{
+    border-bottom: 1px orangered solid;
+}

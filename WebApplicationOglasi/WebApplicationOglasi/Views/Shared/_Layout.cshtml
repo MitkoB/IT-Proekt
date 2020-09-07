@@ -3,87 +3,84 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - М3Н</title>
-    @*@Styles.Render("~/Content/css")*@
-    @*@Styles.Render("~/Content/bootstrap/css")*@
-    <link href="~/Content\bootstrap.min.css" rel="stylesheet" />
+    <title>@ViewBag.Title - OglasiMK</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap/css")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/flip_card_css.css" rel="stylesheet" />
+    <link href="~/Content/style1.css" rel="stylesheet" />
     <link href="~/Content/MyMainLayout.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="logo">
-                    <h1><a href="#">Огласи <span>МК</span></a></h1>
-                    <p>М3Н</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
+
+    <nav class="navbar navbar-expand navbar-dark pt-0 pb-0 pl-5" style="background-color:#00264d;">
+        <div class="container">
+            <a href="#" class=""><img src="@Url.Content("~/Content/images/logo.png")" style="height: 70px; width: 180px;"></a>
+            <ul class="navbar-nav ml-auto text-white font-weight-bold">
+                <li class="nav-item">
+                    <a href="homePage.html" class="nav-link active">@Html.ActionLink("ДОМА", "Index", "Home")</a>
+                </li>
+                <li>
+                    <a>@Html.ActionLink("КРЕИРАЈ ОГЛАС", "Create", "Oglas")</a>
+                </li>
+                <li class="dropdown nav-item">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ОГЛАСИ <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><span>Продажба</span></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("Aparati","Oglas")">Апарати</a></li>
+                        <li><a href="@Url.Action("Avtomobili","Oglas")">Автомобили</a></li>
+                        <li><a href="@Url.Action("Mebel","Oglas")">Мебел</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("RabotnaPozicija","Oglas")">Работни позиции</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("Index","Oglas")">Сите ОГЛАСИ</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">@Html.ActionLink("ЗА НАС", "About", "Home")</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">@Html.ActionLink("КОНТАКТ", "Contact", "Home")</a>
+                </li>
+                <li>
+                    <a  href="#" class="nav-link">@Html.ActionLink("ОМИЛЕНИ ОГЛАСИ", "Index", "FavoriteCart")</a>
+                </li>
+            </ul>
+            <div class="">
                 @Html.Partial("_LoginPartial")
             </div>
+        </div>
+    </nav>
+
+    <div class="body-content">
+        @RenderBody()
+    </div>
+        
+<footer class="mb-0 text-white pt-0 pb-0" style="background-color:#00264d; bottom: 0;">
+    <div class="row no-gutters pb-2">
+        <div class="col-6 pl-3">
+            <img src="@Url.Content("~/Content/images/logo.png")" style="height: 70px; width: 180px; border-bottom: 1px solid orangered"><br>
+            <div class="pt-2">
+                <i class="fab fa-facebook-f fa-2x pr-2"></i>
+                <i class="fab fa-twitter fa-2x pr-2"></i>
+                <i class="fab fa-google fa-2x"></i>
             </div>
-            <div class="row">
-
-                <div class="col-md-12">
-                    <div class="nav-menus">
-
-                        <ul class="nav nav-pills">
-                            <li class="active">@Html.ActionLink("ДОМА", "Index", "Home")</li>
-                            <li>@Html.ActionLink("КРЕИРАЈ ОГЛАС", "Create", "Oglas")</li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ОГЛАСИ <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><span>Продажба</span></li>
-                                    <li class="divider"></li>
-                                    <li><a href="@Url.Action("Aparati","Oglas")">Апарати</a></li>
-                                    <li><a href="@Url.Action("Avtomobili","Oglas")">Автомобили</a></li>
-                                    <li><a href="@Url.Action("Mebel","Oglas")">Мебел</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="@Url.Action("RabotnaPozicija","Oglas")">Работни позиции</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="@Url.Action("Index","Oglas")">Сите ОГЛАСИ</a></li>
-                                </ul>
-                            </li>
-                            <li>@Html.ActionLink("ЗА НАС", "About", "Home")</li>
-                            <li>@Html.ActionLink("КОНТАКТ", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("ОМИЛЕНИ ОГЛАСИ", "Index", "FavoriteCart")</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-            @RenderBody()
-            <hr />
-            <footer>
-                <div class="row">
-                    <div class="col-md-12 copyright">
-
-
-
-                        <div class="col-md-6 col-sm-6 copyright-left">
-                            <p>&copy; @DateTime.Now.Year -Сите права задржани ОГЛАСИ МК М3Н</p>
-                        </div>
-                        <div class="col-md-6 col-sm-6 copyright-right">
-
-                            <ul class="list-unstyled list-social">
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
 
+        <div class="col-6 text-right pr-3">
+            <h4 class="text-white font-weight-light pt-3 pb-2">  <a href="#" class="text-white">Огласи</a> | <a href="#" class="text-white">За нас</a> | <a href="#" class="text-white">Помош</a> </h4>
+            <small class="pt-5">Copyright &copy; OglasiMK</small>
+        </div>
+    </div>
+</footer>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
